@@ -1,0 +1,143 @@
+.body {
+    /*background-color: lavender;*/
+    font-size: 24px;
+    margin: 10px;
+    font-family: Garamond;
+    margin-top: 0;
+    top: 101px;
+    left: 221px;
+}
+
+.body-content {
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+.body-content.active {
+    margin-top: 180px;
+    transform: translateX(300px);
+}
+
+.logo-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* rest of the CSS code */
+
+
+/* Tables */
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    background-color: lightblue;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+/* Page content */
+.p-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: auto;
+}
+
+/* Job application form container */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Prices image*/
+.prices {
+    border: 10px solid black;
+    max-width: 100%;
+}
+
+.prices-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media only screen and (min-width: 768px) {
+    .prices {
+        max-width: 50%;
+    }
+}
+
+/*Tab design*/
+#tabs {
+  margin-top: 30px;
+}
+
+#tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tabs li {
+  float: left;
+  margin-right: 10px;
+}
+
+#tabs a {
+  display: block;
+  padding: 5px;
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+#tabs a:hover {
+  background-color: #ccc;
+}
+
+#tabs .ui-tabs-active a {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+

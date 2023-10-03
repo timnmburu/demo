@@ -1,0 +1,72 @@
+[27-Sep-2023 13:45:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'demo' in 'where clause' in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:38
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(38): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 38
+[27-Sep-2023 13:46:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'demo' in 'where clause' in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:38
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(38): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 38
+[27-Sep-2023 13:47:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'demo' in 'where clause' in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:38
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(38): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 38
+[27-Sep-2023 13:47:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '16-47-44' at line 1 in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:44
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(44): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 44
+[27-Sep-2023 13:47:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '16-47-46' at line 1 in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:44
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(44): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 44
+[27-Sep-2023 13:48:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '16-48-16' at line 1 in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:46
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(46): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 46
+[27-Sep-2023 13:49:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '16-49-00' at line 1 in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:44
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(44): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 44
+[27-Sep-2023 13:49:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(phone, otpHash, dateInitiated) VALUES (254725887269, XNutnVCSgknvkHJuyXZnJU8...' at line 1 in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:44
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(44): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 44
+[27-Sep-2023 13:50:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '16-50-56)' at line 1 in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php:44
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php(44): mysqli->query()
+#1 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 44
+[28-Sep-2023 07:47:16 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 44
+[28-Sep-2023 07:49:52 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /storage/ssd3/668/21095668/public_html/demo/templates/setOtp.php on line 44
+[28-Sep-2023 17:09:25 Etc/GMT-3] PHP Warning:  Undefined global variable $_SESSION in /storage/ssd3/668/21095668/public_html/demo/templates/sendMoney.php on line 124
+[28-Sep-2023 17:09:25 Etc/GMT-3] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/templates/sendMoney.php on line 124
+[28-Sep-2023 17:14:28 Etc/GMT-3] PHP Warning:  Undefined variable $notifyPhone in /storage/ssd3/668/21095668/public_html/demo/templates/sendMoney.php on line 137
+[28-Sep-2023 17:14:38 Etc/GMT-3] PHP Warning:  Undefined variable $notifyPhone in /storage/ssd3/668/21095668/public_html/demo/templates/sendMoney.php on line 161
+[28-Sep-2023 18:19:32 Etc/GMT-3] PHP Fatal error:  Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://payment.intasend.com/api/v1/send-money/initiate/` resulted in a `400 Bad Request` response:
+{"type":"validation_error","errors":[{"code":"min_value","detail":"Ensure this value is greater than or equal to 0.01.", (truncated...)
+ in /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/guzzle/src/Middleware.php(72): GuzzleHttp\Exception\RequestException::create()
+#1 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}()
+#2 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/Promise.php(158): GuzzleHttp\Promise\Promise::callHandler()
+#3 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/Promise.php(251): GuzzleHttp\Promise\TaskQueue->run()
+#5 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/promises/src/Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/guzzle/src/Client.php(189): GuzzleHttp\Promise\Promise->wait()
+#10 /storage/ssd3/668/21095668/public_html/demo/vendor/intasend/intasend-php/src/Traits/BaseAPITrait.php(71): GuzzleHttp\Client->request()
+#11 /storage/ssd3/668/21095668/public_html/demo/vendor/intasend/intasend-php/src/Transfer.php(25): IntaSend\IntaSendPHP\Transfer->send_request()
+#12 /storage/ssd3/668/21095668/public_html/demo/vendor/intasend/intasend-php/src/Transfer.php(46): IntaSend\IntaSendPHP\Transfer->send_money()
+#13 /storage/ssd3/668/21095668/public_html/demo/templates/sendMoney.php(84): IntaSend\IntaSendPHP\Transfer->mpesa()
+#14 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php on line 113
+[28-Sep-2023 18:26:02 Etc/GMT-3] PHP Warning:  file_get_contents(https://www.essentialtech.site/demo/api/requests/get_payment_status/?trackingID=b8d46abc-9509-4650-88af-80f5a7e6cf2e&amp;phone=254725887269): Failed to open stream: HTTP request failed! in /storage/ssd3/668/21095668/public_html/demo/templates/sendMoney.php on line 160

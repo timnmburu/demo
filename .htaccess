@@ -1,0 +1,50 @@
+
+# HTID:19478866: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:19478866:
+
+#Rewrite URL
+RewriteEngine On
+
+RewriteRule ^$ admins.php [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^loginme$ loginme.php [L]
+RewriteRule ^signup$ signup.php [L]
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^admins$ admins.php [L]
+RewriteRule ^products$ /products.php [L]
+RewriteRule ^services$ /services.php [L]
+RewriteRule ^contacts$ /contacts.php [L]
+RewriteRule ^about$ /about.php [L]
+RewriteRule ^bookings$ bookings.php [L]
+RewriteRule ^book$ bookings.php [L]
+RewriteRule ^bookingsmgt$ bookingsMgt.php [L]
+RewriteRule ^order$ /order.php [L]
+RewriteRule ^rewards$ rewards.php [L]
+RewriteRule ^new_customer$ new_customer.php [L]
+RewriteRule ^careers$ /careers.php [L]
+RewriteRule ^pay$ pay.php [L]
+RewriteRule ^redeem$ redeem.php [L]
+RewriteRule ^passreset$ passreset.php [L]
+RewriteRule ^points$ /points.php [L]
+RewriteRule ^passwordReset$ passwordReset.php [L]
+RewriteRule ^new_password$ new_password.php [L]
+RewriteRule ^inventory$ inventory.php [L]
+RewriteRule ^expenses$ expenses.php [L]
+RewriteRule ^performance$ performance.php [L]
+RewriteRule ^commissions$ payCommission.php [L]
+RewriteRule ^mpesa$ stk-push.php [L]
+RewriteRule ^withdraw$ withdrawTo.php [L]
+RewriteRule ^marketing$ marketing.php [L]
+RewriteRule ^profile$ user-profile.php [L]
+RewriteRule ^staffing$ staffing.php [L]
+RewriteRule ^backup$ /regular_backup.php [L]
+RewriteRule ^give$ /templates/sendMoneyAuto.php [L]
+RewriteRule ^request_payment$ /templates/request_payment.php [L]
+RewriteRule ^autorestore$ sys_restore.php [L]
+RewriteRule ^verify$ verifyOtp.php [L]
+RewriteRule ^errorpage$ errorPage.php [L]
+
+php_value error_log ../errors.log
+php_flag log_errors On
+
