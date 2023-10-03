@@ -1,0 +1,325 @@
+API DOCUMENTATION
+***************************************************************************************************************************
+@preparedby Tim
+@doc API_DOC_V1_082023
+
+We understand the trouble it takes to integrate to systems that you work to work with your own. 
+That is why we have made it as simple as it can get to have the proper documentation for connection to Excel Tech Essential system, including examples.
+
+NB: All our APIs are Restful that use POST request method while most of our responses for your callback url will be json responses, unless where explicitly defined.
+
+NB: You will require an API KEY to utilize our APIs i.e 'Authorization: Bearer [username:api_key]'. The Bearer MUST be encrypted using SHA-512 hashing. 
+You can get your API key by sending an email to info@essentialtech.site.
+***************************************************************************************************************************
+
+1. SENDING SMS
+You can send SMS to Local network phone numbers through our API.
+$url = 'https://www.essentialtech.site/demo/api/requests/sendsms/';
+
+Parameters required include:
+1. Username
+2. API key
+3. Recipients phone number in the format 254...
+4. Your message
+
+Response will be in the json format as follows:
+{
+"response_code": code,
+"response_message": message,
+}
+
+The response codes and their descriptions are as follows;
+Code - Description
+200 - Message sent successfully
+401 - Authorization error (mainly wrong API key or username)
+402 - Message repetition are captured with this code
+403 - Any other errors apart from authentication or repetition, e.g. network error
+
+For example in PHP;
+
+<?php
+    $recipient = '254725887269';
+    $message = 'YOUR MESSAGE';
+    $username = 'Demo';
+    $apiKey = 'gdccksjnfs8sf44dknwwwe78dusknf49sd8scieu2skjcseu';
+    
+    $ch = curl_init();
+    $url = 'https://www.essentialtech.site/demo/api/requests/sendsms/';
+    $data = [
+        'recipient' => $recipient,
+        'message' => $message,
+        'username' => $username,
+    ];
+    
+    // Build the x-www-form-urlencoded data string
+    $postData = http_build_query($data);
+
+    // Set the appropriate headers, including the authentication header
+    $headers = [
+        'Content-Type: application/x-www-form-urlencoded',
+        'Authorization: Bearer ' . hash('sha512', $username. ':' . $apiKey),
+    ];
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
+    
+    $response = curl_exec($ch);
+    
+    if (curl_errno($ch)) {
+        // Handle cURL error
+        // echo 'Error: ' . curl_error($ch);
+    } else {
+        $responseM = json_decode($response, true); 
+    
+        if ($responseM['response_code'] === 200) {
+            echo ('Message sent successfully.');
+        } elseif ($responseM['response_code'] === 402) {
+            echo ('Message not sent. Repetition detected.');
+        } elseif ($responseM['response_code'] === 401) {
+            echo ('Message not sent. Check API authentication.');
+        } elseif ($responseM['response_code'] === 403) {
+            echo ('Message not sent. Other responses.');
+        } else {
+            echo ('Unexpected response: ' . $response);
+        }
+    } 
+	
+    curl_close($ch);
+?>
+***************************************************************************************************************************
+
+2. BOOKING APPOINTMENT
+In the case where you use our system but you already have a Bookings Page, you can integrate the Bookings to our system as shown below. 
+NB: this is catered for those who contract us to build their Bookings Page.
+You can capture your customer's bookings using the following url
+$url = 'https://www.essentialtech.site/demo/api/requests/get_booking/';
+
+Parameters required include;
+1. Username
+2. API key
+3. Customer phone number in the format 254...
+4. Customer email
+5. Services booked
+6. Date booking should be delivered
+7. Quote number
+
+API requires Email function and SMS function. The Email function notifies the business administrator that there is a new booking, the SMS function notifies the Customer that their booking is successful.
+
+Therefore, the response in this will be the return value of the last function, SMS, that, the message was sent successfully.
+
+For example in PHP;
+
+<?php
+	$name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $emailFrom = $_POST['email'];
+    $services = $_POST['services'];
+    $dateBooked = $_POST['date'];
+    $adminPhone = $_POST['ADMIN1_PHONE'];
+    $quote = $_POST['quote'];
+    
+    $username = 'Demo';
+    $apiKey = 'SFSDFSDSCJRS8ksdjsd9Kasjddcsc8sdjsned';
+    
+    $ch = curl_init();
+    $url = 'https://www.essentialtech.site/demo/api/requests/get_booking/';
+    $data = [
+        'name' => $name,
+        'phone' => $phone,
+        'email' => $emailFrom,
+        'services' => $services,
+        'date' => $dateBooked,
+        'quote' => $quote,
+        'username' => $username,
+    ];
+    
+    // Build the x-www-form-urlencoded data string
+    $postData = http_build_query($data);
+
+    // Set the appropriate headers, including the authentication header
+    $headers = [
+        'Content-Type: application/x-www-form-urlencoded',
+        'Authorization: Bearer ' . hash('sha512', $username. ':' . $apiKey),
+    ];
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
+    
+    $response = curl_exec($ch);
+    
+    if (curl_errno($ch)) {
+        // Handle cURL error
+        echo 'Error: ' . curl_error($ch);
+    } else {
+        echo $response;
+    } 
+
+    curl_close($ch);
+	
+?>
+
+***************************************************************************************************************************
+3. GET FEEBACK FROM CUSTOMERS
+In the case where you use our system but you already have a Contacts/Feedback Page, you can integrate the page to our system as shown below. 
+NB: this is catered for those who contract us to build their Contacts/Feedback Page.
+You can capture your customer's feedback and enquiries using the following url
+$url = 'https://www.essentialtech.site/demo/api/requests/get_feedback/';
+
+Parameters required include;
+1. Username
+2. API key
+3. Customer name
+4. Customer email
+5. Comments or feedback
+6. Date received
+
+API requires Email function. The Email function notifies the business administrator that there is a new feedback/comment.
+
+Therefore, the response in this will be the return value of the last function, Email, that, it was sent successfully.
+
+For example in PHP;
+<?php
+    $name = 'Tim';
+	$email = 'info@essentialtech.site';
+    $comment = 'This system is just great.';
+	$date = date('Y-m-d H:i:s', strtotime('+3 hours'));
+    $username = 'Tim';
+    $apiKey = 'akajna9e8u2endaskdKJNCCnis8rw3nsd8';
+    
+    $ch = curl_init();
+    $url = 'https://www.essentialtech.site/demo/api/requests/get_feedback/';
+    $data = [
+		'name' => $name,
+		'email' => $email,
+		'comment' => $comment,
+		'date' => $date,
+        'username' => $username,
+    ];
+    
+    // Build the x-www-form-urlencoded data string
+    $postData = http_build_query($data);
+
+    // Set the appropriate headers, including the authentication header
+    $headers = [
+        'Content-Type: application/x-www-form-urlencoded',
+        'Authorization: Bearer ' . hash('sha512', $username. ':' . $apiKey),
+    ];
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
+    
+    $response = curl_exec($ch);
+    
+    if (curl_errno($ch)) {
+        // Handle cURL error
+        echo 'Error: ' . curl_error($ch);
+    } else {
+		echo $response;
+    } 
+
+    curl_close($ch);
+?>
+
+
+***************************************************************************************************************************
+4. GET ORDERS
+In the case where you use our system but you already have an Orders Page, you can integrate the page to our system as shown below. 
+NB: this is catered for those who contract us to build their Orders Page.
+You can capture your customer's orders using the following url
+$url = 'https://www.essentialtech.site/demo/api/requests/get_orders/';
+
+Parameters required include;
+1. Username
+2. API key
+3. Customer name
+4. Customer email
+5. Customer phone
+6. Product name
+7. Quantity
+8. Country
+9. Postal address
+10. Postal code
+11. Location
+12. Order date
+
+API requires Email function. The Email function notifies the business administrator that there is a new order.
+
+Therefore, the response in this will be the return value of the last function, Email, that, it was sent successfully.
+
+For example in PHP;
+<?php
+	$name = 'Tim';
+	$email = 'info@essentialtech.site';
+	$phone = '25478546**';
+	$product = 'System';
+	$quantity = '1';
+	$country = 'Kenya';
+	$postal_address = '9384';
+	$postal_code = '09000';
+	$location = 'Nairobi';
+    $date = date('Y-m-d H:i:s', strtotime('+3 hours'));
+    $username = 'Tim';
+    $apiKey = 'KSJDSKSJNW9jKUHksI97YIABAK';
+    
+    $ch = curl_init();
+    $url = 'https://www.essentialtech.site/demo/api/requests/get_orders/';
+    $data = [
+		'name' => $name,
+		'email' => $email,
+		'phone' => $phone,
+		'product' => $product,
+		'quantity' => $quantity,
+		'country' => $country,
+		'postal_address' => $postal_address,
+		'postal_code' => $postal_code,
+		'location' => $location,
+		'date' => $date,
+        'username' => $username,
+    ];
+    
+    // Build the x-www-form-urlencoded data string
+    $postData = http_build_query($data);
+
+    // Set the appropriate headers, including the authentication header
+    $headers = [
+        'Content-Type: application/x-www-form-urlencoded',
+        'Authorization: Bearer ' . hash('sha512', $username. ':' . $apiKey),
+    ];
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    
+    $response = curl_exec($ch);
+    
+    if (curl_errno($ch)) {
+        // Handle cURL error
+        echo 'Error: ' . curl_error($ch);
+    } else {
+		echo $response;
+    } 
+
+    curl_close($ch);
+?>
+***************************************************************************************************************************
+
+If you require any API for any function to integrate with the System, reach out to us on info@essentialtech.site and we will work on it ASAP. Nothing is impossible.
+
+For any enquiries, contact us now.
+
+Thank you and all the best.

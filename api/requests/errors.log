@@ -1,0 +1,30 @@
+[28-Sep-2023 15:41:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 41
+[28-Sep-2023 15:41:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 50
+[28-Sep-2023 15:41:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 51
+[28-Sep-2023 15:41:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 52
+[28-Sep-2023 15:41:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 53
+[28-Sep-2023 19:19:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 41
+[28-Sep-2023 19:19:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 50
+[28-Sep-2023 19:19:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 51
+[28-Sep-2023 19:19:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 52
+[28-Sep-2023 19:19:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 53
+[29-Sep-2023 06:18:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 41
+[29-Sep-2023 06:18:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 50
+[29-Sep-2023 06:18:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 51
+[29-Sep-2023 06:18:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 52
+[29-Sep-2023 06:18:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_payment_status/get_payment_status.php on line 53
+[02-Oct-2023 13:11:34 UTC] PHP Warning:  require_once(/storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/../../../tempates/notifications.php): Failed to open stream: No such file or directory in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php on line 3
+[02-Oct-2023 13:11:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/../../../tempates/notifications.php' (include_path='.:/usr/share/pear:/usr/share/php:/usr/share/pear:/usr/share/php') in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php:3
+Stack trace:
+#0 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php on line 3
+[02-Oct-2023 13:11:37 UTC] PHP Warning:  require_once(/storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/../../../tempates/notifications.php): Failed to open stream: No such file or directory in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php on line 3
+[02-Oct-2023 13:11:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/../../../tempates/notifications.php' (include_path='.:/usr/share/pear:/usr/share/php:/usr/share/pear:/usr/share/php') in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php:3
+Stack trace:
+#0 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php on line 3
+[02-Oct-2023 13:11:51 UTC] PHP Warning:  require_once(/storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/../../../tempates/notifications.php): Failed to open stream: No such file or directory in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php on line 3
+[02-Oct-2023 13:11:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/../../../tempates/notifications.php' (include_path='.:/usr/share/pear:/usr/share/php:/usr/share/pear:/usr/share/php') in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php:3
+Stack trace:
+#0 {main}
+  thrown in /storage/ssd3/668/21095668/public_html/demo/api/requests/get_collections_responses/get_collections_responses.php on line 3
