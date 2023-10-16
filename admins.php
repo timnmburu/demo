@@ -75,7 +75,7 @@
         <div class="body-content">
             <h1>Home</h1> 
             
-            NB: Check out our <a href="/api_doc">API doc</a> incase you need to integrate your system/website with ours<br>
+            <!--NB: Check out our <a href="/api_doc">API doc</a> incase you need to integrate your system/website with ours<br>-->
             
             <p><b>FEEDBACK FROM WEBSITE</b></p>
             
